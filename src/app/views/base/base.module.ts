@@ -8,6 +8,7 @@ import { CardsComponent } from './cards.component';
 // Forms Component
 import { FormsComponent } from './forms.component';
 import { MailSettingComponent } from './mail-setting.component';
+import { MailformComponent } from './mailform.component';
 
 
 import { SwitchesComponent } from './switches.component';
@@ -68,6 +69,7 @@ import { BaseRoutingModule } from './base-routing.module';
     CardsComponent,
     FormsComponent,
     MailSettingComponent,
+    MailformComponent,
     SwitchesComponent,
     TablesComponent,
     TabsComponent,
