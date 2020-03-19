@@ -7,6 +7,8 @@ import { CardsComponent } from './cards.component';
 
 // Forms Component
 import { FormsComponent } from './forms.component';
+import { MailSettingComponent } from './mail-setting.component';
+
 
 import { SwitchesComponent } from './switches.component';
 import { TablesComponent } from './tables.component';
@@ -65,6 +67,7 @@ import { BaseRoutingModule } from './base-routing.module';
   declarations: [
     CardsComponent,
     FormsComponent,
+    MailSettingComponent,
     SwitchesComponent,
     TablesComponent,
     TabsComponent,

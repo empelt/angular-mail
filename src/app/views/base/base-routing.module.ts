@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { CardsComponent } from './cards.component';
 import { FormsComponent } from './forms.component';
+import { MailSettingComponent } from './mail-setting.component';
 import { SwitchesComponent } from './switches.component';
 import { TablesComponent } from './tables.component';
 import { TabsComponent } from './tabs.component';
@@ -39,6 +40,15 @@ const routes: Routes = [
           title: 'Forms'
         }
       },
+      
+      {
+        path: 'mail-setting',
+        component: MailSettingComponent,
+        data: {
+          title: 'Mailsetting'
+        }
+      },
+      
       {
         path: 'switches',
         component: SwitchesComponent,

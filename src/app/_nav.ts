@@ -57,6 +57,11 @@ export const navItems: INavData[] = [
         url: '/base/forms',
         icon: 'icon-puzzle'
       },
+      {
+        name: 'Mailsetting',
+        url: '/base/mail-setting',
+        icon: 'icon-puzzle'
+      },
       /*
       {
         name: 'Navbars',
@@ -199,6 +204,7 @@ export const navItems: INavData[] = [
     }
   },
   */
+  /*
   {
     divider: true
   },
@@ -233,6 +239,7 @@ export const navItems: INavData[] = [
       }
     ]
   },
+  */
   /*
   {
     name: 'Disabled',
