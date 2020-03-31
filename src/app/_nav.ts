@@ -9,21 +9,21 @@ export const navItems: INavData[] = [
   {
     name: 'Mail Template',
     url: '/mail-template',
-    icon: 'icon-puzzle',
+    icon: 'icon-notebook',
   },
   {
     name: 'Mailadress Setting',
     url: '/mailadress-setting',
-    icon: 'icon-puzzle',
+    icon: 'icon-wrench',
   },
   {
     name: 'Send Mail',
     url: '/send-mail',
-    icon: 'icon-puzzle',
+    icon: 'icon-envelope',
   },
   {
     name: 'Sended Mails',
     url: '/sended-mails',
-    icon: 'icon-puzzle',
+    icon: 'icon-list',
   },
 ];
