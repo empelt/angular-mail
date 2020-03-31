@@ -1,98 +1,201 @@
-<div class="animated fadeIn">
-    <!--中央寄せ-->
-    <div class="container">
-      <div class="card">
-        <div class="card-header">
-          <strong>Mail Template</strong>
-        </div>
-        <div class="card-body">
-          <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="text-input">Title</label>
-              <div class="col-md-9">
-                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="お問い合わせありがとうございます">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="email-input">From</label>
-              <div class="col-md-9">
-                <input type="email" id="email-input" name="email-input" class="form-control" placeholder="admin" autocomplete="email">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="textarea-input">Content</label>
-              <div class="col-md-9">
-                <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="山田太郎様。&#13;&#10;こんにちわ。お世話になっております。&#13;&#10;ありがとうございます。"></textarea>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save</button>
-          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-        </div>
+<div class="animated fadeIn mail-template-main">
+  <!--中央寄せ-->
+  <div class="container">
+    <div class="card" *ngFor="let template of templates">
+      <div class="card-header">
+        <strong>Mail Template</strong>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <strong>Mail Template</strong>
-        </div>
-        <div class="card-body">
-          <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="text-input">Title</label>
-              <div class="col-md-9">
-                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="お問い合わせありがとうございます">
-              </div>
+      <div class="card-body">
+        <form
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+          class="form-horizontal"
+        >
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="text-input"
+              >Title</label
+            >
+            <div class="col-md-9">
+              <input
+                type="text"
+                id="text-input"
+                name="text-input"
+                class="form-control"
+                placeholder="お問い合わせありがとうございます"
+                value="{{ template.title }}"
+              />
             </div>
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="email-input">From</label>
-              <div class="col-md-9">
-                <input type="email" id="email-input" name="email-input" class="form-control" placeholder="admin" autocomplete="email">
-              </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="email-input"
+              >From</label
+            >
+            <div class="col-md-9">
+              <input
+                type="email"
+                id="email-input"
+                name="email-input"
+                class="form-control"
+                placeholder="admin"
+                autocomplete="email"
+              />
             </div>
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="textarea-input">Content</label>
-              <div class="col-md-9">
-                <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="山田太郎様。&#13;&#10;こんにちわ。お世話になっております。&#13;&#10;ありがとうございます。"></textarea>
-              </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="textarea-input"
+              >Content</label
+            >
+            <div class="col-md-9">
+              <textarea
+                id="textarea-input"
+                name="textarea-input"
+                rows="9"
+                class="form-control"
+                placeholder="山田太郎様。&#13;&#10;こんにちわ。お世話になっております。&#13;&#10;ありがとうございます。"
+              ></textarea>
             </div>
-          </form>
-        </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save</button>
-          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-        </div>
+          </div>
+        </form>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <strong>Mail Template</strong>
-        </div>
-        <div class="card-body">
-          <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="text-input">Title</label>
-              <div class="col-md-9">
-                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="お問い合わせありがとうございます">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="email-input">From</label>
-              <div class="col-md-9">
-                <input type="email" id="email-input" name="email-input" class="form-control" placeholder="admin" autocomplete="email">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-3 col-form-label" for="textarea-input">Content</label>
-              <div class="col-md-9">
-                <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="山田太郎様。&#13;&#10;こんにちわ。お世話になっております。&#13;&#10;ありがとうございます。"></textarea>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save</button>
-          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-        </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary">
+          <i class="fa fa-dot-circle-o"></i> Save
+        </button>
+        <button type="reset" class="btn btn-sm btn-danger">
+          <i class="fa fa-ban"></i> Reset
+        </button>
       </div>
     </div>
+    <div class="card">
+      <div class="card-header">
+        <strong>Mail Template</strong>
+      </div>
+      <div class="card-body">
+        <form
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+          class="form-horizontal"
+        >
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="text-input"
+              >Title</label
+            >
+            <div class="col-md-9">
+              <input
+                type="text"
+                id="text-input"
+                name="text-input"
+                class="form-control"
+                placeholder="お問い合わせありがとうございます"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="email-input"
+              >From</label
+            >
+            <div class="col-md-9">
+              <input
+                type="email"
+                id="email-input"
+                name="email-input"
+                class="form-control"
+                placeholder="admin"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="textarea-input"
+              >Content</label
+            >
+            <div class="col-md-9">
+              <textarea
+                id="textarea-input"
+                name="textarea-input"
+                rows="9"
+                class="form-control"
+                placeholder="山田太郎様。&#13;&#10;こんにちわ。お世話になっております。&#13;&#10;ありがとうございます。"
+              ></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary">
+          <i class="fa fa-dot-circle-o"></i> Save
+        </button>
+        <button type="reset" class="btn btn-sm btn-danger">
+          <i class="fa fa-ban"></i> Reset
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <strong>Mail Template</strong>
+      </div>
+      <div class="card-body">
+        <form
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+          class="form-horizontal"
+        >
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="text-input"
+              >Title</label
+            >
+            <div class="col-md-9">
+              <input
+                type="text"
+                id="text-input"
+                name="text-input"
+                class="form-control"
+                placeholder="お問い合わせありがとうございます"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="email-input"
+              >From</label
+            >
+            <div class="col-md-9">
+              <input
+                type="email"
+                id="email-input"
+                name="email-input"
+                class="form-control"
+                placeholder="admin"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="textarea-input"
+              >Content</label
+            >
+            <div class="col-md-9">
+              <textarea
+                id="textarea-input"
+                name="textarea-input"
+                rows="9"
+                class="form-control"
+                placeholder="山田太郎様。&#13;&#10;こんにちわ。お世話になっております。&#13;&#10;ありがとうございます。"
+              ></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary">
+          <i class="fa fa-dot-circle-o"></i> Save
+        </button>
+        <button type="reset" class="btn btn-sm btn-danger">
+          <i class="fa fa-ban"></i> Reset
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
