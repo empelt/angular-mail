@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SendedMailsComponent } from './sended-mails.component';
 
+import { CommonModule } from "@angular/common";
+
 const routes: Routes = [
   {
     path: '',
@@ -14,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes),CommonModule],
   exports: [RouterModule]
 })
 export class SendedMailsRoutingModule {}

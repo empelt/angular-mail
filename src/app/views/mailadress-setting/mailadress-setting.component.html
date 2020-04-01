@@ -13,30 +13,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td><input type="text" class="form-control" placeholder="mike"></td>
-                <td><input type="text" class="form-control" placeholder="sample@ssa.co.jp"></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><input type="text" class="form-control" placeholder="john"></td>
-                <td><input type="text" class="form-control" placeholder="sample@ssa.co.jp"></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><input type="text" class="form-control" placeholder="mike"></td>
-                <td><input type="text" class="form-control" placeholder="sample@ssa.co.jp"></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td><input type="text" class="form-control" placeholder="mbob"></td>
-                <td><input type="text" class="form-control" placeholder="sample@ssa.co.jp"></td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td><input type="text" class="form-control" placeholder="mibbke"></td>
-                <td><input type="text" class="form-control" placeholder="sample@ssa.co.jp"></td>
+              <tr *ngFor="let adress of adresses">
+                <td>{{adress.id}}</td>
+                <td><input type="text" class="form-control" placeholder="{{adress.username}}"></td>
+                <td><input type="text" class="form-control" placeholder="{{adress.adress}}"></td>
               </tr>
             </tbody>
           </table>
