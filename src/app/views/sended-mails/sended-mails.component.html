@@ -13,30 +13,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
-              </tr>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
-              </tr>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
-              </tr>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
-              </tr>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
+              <tr *ngFor="let sendedmail of sendedmails">
+                <td>{{sendedmail.date}}</td>
+                <td>{{sendedmail.to}}</td>
+                <td>{{sendedmail.title}}</td>
               </tr>
             </tbody>
           </table>

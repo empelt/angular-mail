@@ -2,10 +2,7 @@
       <div class="card">
         <div class="card-header">
           <select id="select1" name="select1" class="form-control">
-            <option value="0">Select template</option>
-            <option value="1">No.1</option>
-            <option value="2">No.2</option>
-            <option value="3">No.3</option>
+            <option *ngFor="let template of templates">template {{template.id}}</option>
           </select>
         </div>
   

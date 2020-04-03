@@ -7,13 +7,16 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { SendMailComponent } from './send-mail.component';
 import { SendMailRoutingModule } from './send-mail-routing.module';
 
+import { CommonModule } from "@angular/common";
+
 @NgModule({
   imports: [
     FormsModule,
     SendMailRoutingModule,
     ChartsModule,
     BsDropdownModule,
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    CommonModule,
   ],
   declarations: [ SendMailComponent ]
 })

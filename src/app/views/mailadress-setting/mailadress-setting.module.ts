@@ -7,8 +7,12 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { MailadressSettingComponent } from './mailadress-setting.component';
 import { MailadressSettingRoutingModule } from './mailadress-setting-routing.module';
 
+import { CommonModule } from "@angular/common";
+
+
 @NgModule({
   imports: [
+    CommonModule,
     FormsModule,
     MailadressSettingRoutingModule,
     ChartsModule,
