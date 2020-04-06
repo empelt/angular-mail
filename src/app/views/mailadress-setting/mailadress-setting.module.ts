@@ -7,8 +7,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { MailadressSettingComponent } from './mailadress-setting.component';
 import { MailadressSettingRoutingModule } from './mailadress-setting-routing.module';
 
-import { CommonModule } from "@angular/common";
-
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -17,8 +16,8 @@ import { CommonModule } from "@angular/common";
     MailadressSettingRoutingModule,
     ChartsModule,
     BsDropdownModule,
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
   ],
-  declarations: [ MailadressSettingComponent ]
+  declarations: [MailadressSettingComponent],
 })
-export class MailadressSettingModule { }
+export class MailadressSettingModule {}

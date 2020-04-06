@@ -7,7 +7,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { SendMailComponent } from './send-mail.component';
 import { SendMailRoutingModule } from './send-mail-routing.module';
 
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -18,6 +18,6 @@ import { CommonModule } from "@angular/common";
     ButtonsModule.forRoot(),
     CommonModule,
   ],
-  declarations: [ SendMailComponent ]
+  declarations: [SendMailComponent],
 })
-export class SendMailModule { }
+export class SendMailModule {}

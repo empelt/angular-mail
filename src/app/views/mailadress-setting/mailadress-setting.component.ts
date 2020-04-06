@@ -1,34 +1,33 @@
 import { Component } from '@angular/core';
 
-import { Adress } from "../../models/adress";
+import { Adress } from '../../models/adress';
 
 @Component({
-  templateUrl: 'mailadress-setting.component.html'
+  templateUrl: 'mailadress-setting.component.html',
 })
 export class MailadressSettingComponent {
-
-  constructor() { }
+  constructor() {}
 
   adresses = new Array<Adress>();
 
   ngOnInit() {
-    var add_adress = new Adress();
-    add_adress.id = 1;
-    add_adress.username = "test1";
-    add_adress.adress = "test1@gmail.com";
-    this.adresses.push(add_adress);
+    const addAdress = new Adress();
 
-    var add_adress2 = new Adress();
-    add_adress2.id = 2;
-    add_adress2.username = "test2";
-    add_adress2.adress = "test2@gmail.com";
-    this.adresses.push(add_adress2);
+    addAdress.id = 1;
+    addAdress.username = 'test1';
+    addAdress.adress = 'test1@gmail.com';
+    this.adresses.push(addAdress);
 
-    var add_adress3 = new Adress();
-    add_adress3.id = 3;
-    add_adress3.username = "test3";
-    add_adress3.adress = "test3@gmail.com";
-    this.adresses.push(add_adress3);
+    const addAdress2 = new Adress();
+    addAdress2.id = 2;
+    addAdress2.username = 'test2';
+    addAdress2.adress = 'test2@gmail.com';
+    this.adresses.push(addAdress2);
+
+    const addAdress3 = new Adress();
+    addAdress3.id = 3;
+    addAdress3.username = 'test3';
+    addAdress3.adress = 'test3@gmail.com';
+    this.adresses.push(addAdress3);
   }
-
 }
