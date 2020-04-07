@@ -8,9 +8,18 @@ import { Adress } from '../../models/adress';
 export class MailadressSettingComponent {
   constructor() {}
 
-  adresses = new Array<Adress>();
+  //adresses = new Array<Adress>();
+
+  adresses = [
+    { id: 1, username: 'test1', adress: 'test1@gmail.com' },
+    { id: 2, username: 'test2', adress: 'test2@gmail.com' },
+    { id: 3, username: 'test3', adress: 'test3@gmail.com' },
+    { id: 4, username: 'test4', adress: 'test4@gmail.com' },
+    { id: 5, username: 'test5', adress: 'test5@gmail.com' },
+  ];
 
   ngOnInit() {
+    /*
     const addAdress = new Adress();
 
     addAdress.id = 1;
@@ -29,5 +38,6 @@ export class MailadressSettingComponent {
     addAdress3.username = 'test3';
     addAdress3.adress = 'test3@gmail.com';
     this.adresses.push(addAdress3);
+    */
   }
 }

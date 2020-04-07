@@ -1,5 +1,5 @@
 export class SendedMail {
-    date: string;
-    to: string;
-    title: string;
+  date: string;
+  to: string;
+  title: string;
 }
