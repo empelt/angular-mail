@@ -44,7 +44,10 @@ export class SendMailComponent {
   showtmp = new Template();
 
   ngOnInit() {
-    console.log('hello');
+    this.showtmp.id = null;
+    this.showtmp.title = '';
+    this.showtmp.from = '';
+    this.showtmp.content = '';
     /*
     const tmp_template = new Template();
     tmp_template.id = 1;
@@ -76,6 +79,8 @@ export class SendMailComponent {
     */
   }
   onOptionsSelected(event: any) {
-    console.log(event.target.id);
+    console.log(event);
+    this.showtmp.from = this.templates.find((v) => v.id == event).from;
+    this.showtmp.content = this.templates.find((v) => v.id == event).content;
   }
 }
