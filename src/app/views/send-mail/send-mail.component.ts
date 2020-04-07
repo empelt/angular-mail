@@ -1,43 +1,81 @@
 import { Component } from '@angular/core';
-import { Template } from "../../models/template";
+import { Template } from '../../models/template';
 
 @Component({
-  templateUrl: 'send-mail.component.html'
+  templateUrl: 'send-mail.component.html',
 })
 export class SendMailComponent {
+  constructor() {}
 
-  constructor() { }
+  //templates = new Array<Template>();
+  templates = [
+    {
+      id: 1,
+      title: 'test1',
+      from: 'test1@gmail.com',
+      content: 'test_content1',
+    },
+    {
+      id: 2,
+      title: 'test2',
+      from: 'test2@gmail.com',
+      content: 'test_content2',
+    },
+    {
+      id: 3,
+      title: 'test3',
+      from: 'test3@gmail.com',
+      content: 'test_content3',
+    },
+    {
+      id: 4,
+      title: 'test4',
+      from: 'test4@gmail.com',
+      content: 'test_content4',
+    },
+    {
+      id: 5,
+      title: 'test5',
+      from: 'test5@gmail.com',
+      content: 'test_content5',
+    },
+  ];
 
-  templates = new Array<Template>();
+  showtmp = new Template();
 
   ngOnInit() {
-    var tmp_template = new Template();
+    console.log('hello');
+    /*
+    const tmp_template = new Template();
     tmp_template.id = 1;
-    tmp_template.title = "test1";
-    tmp_template.from = "test1";
-    tmp_template.content = "this is sample sentence1.";
+    tmp_template.title = 'test1';
+    tmp_template.from = 'test1';
+    tmp_template.content = 'this is sample sentence1.';
     this.templates.push(tmp_template);
 
-    var tmp_template2 = new Template();
+    const tmp_template2 = new Template();
     tmp_template2.id = 2;
-    tmp_template2.title = "test2";
-    tmp_template2.from = "test2";
-    tmp_template2.content = "this is sample sentence2.";
-    this.templates.push(tmp_template2); 
+    tmp_template2.title = 'test2';
+    tmp_template2.from = 'test2';
+    tmp_template2.content = 'this is sample sentence2.';
+    this.templates.push(tmp_template2);
 
-    var tmp_template3 = new Template();
+    const tmp_template3 = new Template();
     tmp_template3.id = 3;
-    tmp_template3.title = "test3";
-    tmp_template3.from = "test3";
-    tmp_template3.content = "this is sample sentence3.";
-    this.templates.push(tmp_template3); 
+    tmp_template3.title = 'test3';
+    tmp_template3.from = 'test3';
+    tmp_template3.content = 'this is sample sentence3.';
+    this.templates.push(tmp_template3);
 
-    var tmp_template4 = new Template();
+    const tmp_template4 = new Template();
     tmp_template4.id = 4;
-    tmp_template4.title = "test4";
-    tmp_template4.from = "test4";
-    tmp_template4.content = "this is sample sentence4.";
-    this.templates.push(tmp_template4); 
+    tmp_template4.title = 'test4';
+    tmp_template4.from = 'test4';
+    tmp_template4.content = 'this is sample sentence4.';
+    this.templates.push(tmp_template4);
+    */
   }
-
+  onOptionsSelected(event: any) {
+    console.log(event.target.id);
+  }
 }

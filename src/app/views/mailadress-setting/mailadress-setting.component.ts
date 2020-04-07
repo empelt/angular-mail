@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Adress } from '../../models/adress';
+//import { Adress } from '../../models/adress';
 
 @Component({
   templateUrl: 'mailadress-setting.component.html',

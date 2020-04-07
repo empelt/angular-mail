@@ -1,8 +1,9 @@
 <div class="animated fadeIn">
       <div class="card">
         <div class="card-header">
-          <select id="select1" name="select1" class="form-control">
-            <option *ngFor="let template of templates">template {{template.id}}</option>
+          <select id="select1" name="select1" class="form-control" (change)="onOptionsSelected($event)">
+            <option [value]="null" disabled>choose template</option>
+            <option class="option" *ngFor="let template of templates" [value]="template">template {{template.id}}</option>
           </select>
         </div>
         <div class="card-body">
