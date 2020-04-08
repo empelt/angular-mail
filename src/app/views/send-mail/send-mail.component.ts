@@ -13,19 +13,19 @@ export class SendMailComponent {
       id: 1,
       title: 'test1',
       from: 'test1@gmail.com',
-      content: 'test_content1',
+      content: 'test_content1 こんにちわ',
     },
     {
       id: 2,
       title: 'test2',
       from: 'test2@gmail.com',
-      content: 'test_content2',
+      content: 'test_content2　いつもお世話になっております',
     },
     {
       id: 3,
       title: 'test3',
       from: 'test3@gmail.com',
-      content: 'test_content3',
+      content: 'test_content3　はろう',
     },
     {
       id: 4,
