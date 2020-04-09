@@ -93,6 +93,14 @@ export class MailtemplateComponent {
     this.iconCollapse = this.isCollapsed ? 'icon-arrow-down' : 'icon-arrow-up';
   }
 
+  saveTemplate(event: any) {
+    console.log(event);
+  }
+
+  resetTemplate(event: any) {
+    console.log(event);
+  }
+
   private errorHandler(err) {
     console.log('Error occured.', err);
     return Promise.reject(err.message || err);
