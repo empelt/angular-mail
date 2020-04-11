@@ -28,12 +28,14 @@ export class MailtemplateComponent {
       response.json();
       console.log(response);
     });
+
     var tmp_template = new Template();
     tmp_template.id = 1;
     tmp_template.title = "test";
     tmp_template.from = "test@gmail.com";
     tmp_template.content = "test_content";
     this.templates.push(tmp_template);
+
     var tmp_template2 = new Template();
     tmp_template2.id = 2;
     tmp_template2.title = "test2";
