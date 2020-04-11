@@ -1,41 +1,78 @@
 <div class="animated fadeIn">
   <div class="container">
-      <div class="card">
-        <div class="card-header">
-          <i class="fa fa-align-justify"></i> Simple Table
-        </div>
-        <div class="card-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>adress</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let adress of adresses">
-                <td>{{adress.id}}</td>
-                <td><input type="text" class="form-control" placeholder="{{adress.username}}"></td>
-                <td><input type="text" class="form-control" placeholder="{{adress.adress}}"></td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-            <li class="page-item active">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-          </ul>
-        </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
-          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
-        </div>
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> Simple Table
       </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>adress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let adress of adresses">
+              <td>{{ adress.id }}</td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="{{ adress.username }}"
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="{{ adress.adress }}"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </div>
+      <table class="table">
+        <tr>
+          <th>タイトル</th>
+          <th>著者</th>
+          <th>公開日</th>
+        </tr>
+        <!-- ［1］sliceパイプを準備-->
+        <tr *ngFor="let adress of adresses | slice: begin:begin + length">
+          <td>
+            <a href="{{ adress.username }}">{{ adress.username }}</a>
+          </td>
+          <td>{{ adress.username }}</td>
+          <td>{{ adress.username }}</td>
+        </tr>
+      </table>
+      <!-- ［4］ページャーを表示 -->
+      <ul class="pagination">
+        <li><a class="page-link" (click)="pager(0)">1</a></li>
+        <li><a class="page-link" (click)="pager(1)">2</a></li>
+        <li><a class="page-link" (click)="pager(2)">3</a></li>
+      </ul>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary">
+          <i class="fa fa-dot-circle-o"></i> Submit
+        </button>
+        <button type="reset" class="btn btn-sm btn-danger">
+          <i class="fa fa-ban"></i> Reset
+        </button>
+      </div>
+    </div>
   </div>
 </div>

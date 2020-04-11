@@ -10,6 +10,9 @@ export class MailadressSettingComponent {
 
   //adresses = new Array<Adress>();
 
+  begin = 0;
+  length = 3;
+
   adresses = [
     { id: 1, username: 'test1', adress: 'test1@gmail.com' },
     { id: 2, username: 'test2', adress: 'test2@gmail.com' },
@@ -39,5 +42,8 @@ export class MailadressSettingComponent {
     addAdress3.adress = 'test3@gmail.com';
     this.adresses.push(addAdress3);
     */
+  }
+  pager(page: number) {
+    this.begin = this.length * page;
   }
 }

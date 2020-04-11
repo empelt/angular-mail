@@ -62,20 +62,20 @@ export class MailtemplateComponent {
       response.json();
       console.log(response);
     });
-    /*
-    const tmp_template = new Template();
+
+    var tmp_template = new Template();
     tmp_template.id = 1;
     tmp_template.title = 'test';
     tmp_template.from = 'test@gmail.com';
     tmp_template.content = 'test_content';
     this.templates.push(tmp_template);
-    const tmp_template2 = new Template();
+
+    var tmp_template2 = new Template();
     tmp_template2.id = 2;
     tmp_template2.title = 'test2';
     tmp_template2.from = 'test2@gmail.com';
     tmp_template2.content = 'test_content2';
     this.templates.push(tmp_template2);
-    */
 
     console.log(this.templates);
   }
