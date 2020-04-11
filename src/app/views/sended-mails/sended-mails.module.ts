@@ -6,6 +6,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { SendedMailsComponent } from './sended-mails.component';
 import { SendedMailsRoutingModule } from './sended-mails-routing.module';
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { SendedMailsRoutingModule } from './sended-mails-routing.module';
     SendedMailsRoutingModule,
     ChartsModule,
     BsDropdownModule,
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    CommonModule,
   ],
   declarations: [ SendedMailsComponent ]
 })

@@ -1,20 +1,18 @@
 <div class="animated fadeIn">
+  <div class="container">
       <div class="card">
         <div class="card-header">
-          <select id="select1" name="select1" class="form-control">
-            <option value="0">Select template</option>
-            <option value="1">No.1</option>
-            <option value="2">No.2</option>
-            <option value="3">No.3</option>
+          <select id="select1" name="select1" class="form-control" (change)="onOptionsSelected($event.target.value)">
+            <option [value]="null" disabled>choose template</option>
+            <option class="option" *ngFor="let template of templates" [value]="template.id">template {{template.id}}</option>
           </select>
         </div>
-  
         <div class="card-body">
           <form>
             <div class="form-row mb-3">
               <label class="col-2 col-sm-1 col-form-label" for="to">To:</label>
               <div class="col-10 col-sm-11">
-                <input class="form-control" id="to" placeholder="Type email" type="email">
+                <input class="form-control" id="to" value={{showtmp.from}} type="email">
               </div>
             </div>
             <div class="form-row mb-3">
@@ -118,7 +116,7 @@
                 </div>
               </div>
               <div class="form-group mt-4">
-                <textarea class="form-control" id="message" name="body" placeholder="Click here to reply" rows="12">
+                <textarea class="form-control" id="message" name="body" value="{{showtmp.content}}" rows="12">
   
                 </textarea>
               </div>
@@ -131,4 +129,5 @@
           </div>
         </div>
       </div>
+  </div>
   </div>

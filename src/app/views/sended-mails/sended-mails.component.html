@@ -1,4 +1,5 @@
 <div class="animated fadeIn">
+  <div class="container">
       <div class="card">
         <div class="card-header">
           <i class="fa fa-align-justify"></i> Simple Table
@@ -13,30 +14,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
-              </tr>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
-              </tr>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
-              </tr>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
-              </tr>
-              <tr>
-                <td>2012/01/01</td>
-                <td>Mike</td>
-                <td>hello mike!</td>
+              <tr *ngFor="let sendedmail of sendedmails">
+                <td>{{sendedmail.date}}</td>
+                <td>{{sendedmail.to}}</td>
+                <td>{{sendedmail.title}}</td>
               </tr>
             </tbody>
           </table>
@@ -52,4 +33,5 @@
           </ul>
         </div>
       </div>
+  </div>
 </div>
