@@ -29,8 +29,8 @@ export class MailadressSettingComponent {
   ];
 
   begin = 0;
-  length = 3;
-  size = (Object.keys(this.adresses).length - 1) / 3;
+  length = 5;
+  size = (Object.keys(this.adresses).length - 1) / 5;
 
   pagerlist = [];
   ngOnInit() {
