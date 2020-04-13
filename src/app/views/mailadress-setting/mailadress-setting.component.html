@@ -14,57 +14,29 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let adress of adresses">
+            <tr *ngFor="let adress of adresses | slice: begin:begin + length">
               <td>{{ adress.id }}</td>
               <td>
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="{{ adress.username }}"
+                  value="{{ adress.username }}"
                 />
               </td>
               <td>
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="{{ adress.adress }}"
+                  value="{{ adress.adress }}"
                 />
               </td>
             </tr>
           </tbody>
         </table>
         <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-          <li class="page-item active">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          <li class="page-item" *ngFor="let n of pagerlist"><a class="page-link" (click)="pager(n)">{{n}}</a></li>
         </ul>
       </div>
-      <table class="table">
-        <tr>
-          <th>タイトル</th>
-          <th>著者</th>
-          <th>公開日</th>
-        </tr>
-        <!-- ［1］sliceパイプを準備-->
-        <tr *ngFor="let adress of adresses | slice: begin:begin + length">
-          <td>
-            <a href="{{ adress.username }}">{{ adress.username }}</a>
-          </td>
-          <td>{{ adress.username }}</td>
-          <td>{{ adress.username }}</td>
-        </tr>
-      </table>
-      <!-- ［4］ページャーを表示 -->
-      <ul class="pagination">
-        <li><a class="page-link" (click)="pager(0)">1</a></li>
-        <li><a class="page-link" (click)="pager(1)">2</a></li>
-        <li><a class="page-link" (click)="pager(2)">3</a></li>
-      </ul>
       <div class="card-footer">
         <button type="submit" class="btn btn-sm btn-primary">
           <i class="fa fa-dot-circle-o"></i> Submit

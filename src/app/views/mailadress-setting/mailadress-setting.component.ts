@@ -10,38 +10,33 @@ export class MailadressSettingComponent {
 
   //adresses = new Array<Adress>();
 
-  begin = 0;
-  length = 3;
-
   adresses = [
     { id: 1, username: 'test1', adress: 'test1@gmail.com' },
     { id: 2, username: 'test2', adress: 'test2@gmail.com' },
     { id: 3, username: 'test3', adress: 'test3@gmail.com' },
     { id: 4, username: 'test4', adress: 'test4@gmail.com' },
     { id: 5, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 6, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 7, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 8, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 9, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 10, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 11, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 12, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 13, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 14, username: 'test5', adress: 'test5@gmail.com' },
+    { id: 15, username: 'test5', adress: 'test5@gmail.com' },
   ];
 
+  begin = 0;
+  length = 3;
+  size = (Object.keys(this.adresses).length - 1) / 3;
+
+  pagerlist = [];
   ngOnInit() {
-    /*
-    const addAdress = new Adress();
-
-    addAdress.id = 1;
-    addAdress.username = 'test1';
-    addAdress.adress = 'test1@gmail.com';
-    this.adresses.push(addAdress);
-
-    const addAdress2 = new Adress();
-    addAdress2.id = 2;
-    addAdress2.username = 'test2';
-    addAdress2.adress = 'test2@gmail.com';
-    this.adresses.push(addAdress2);
-
-    const addAdress3 = new Adress();
-    addAdress3.id = 3;
-    addAdress3.username = 'test3';
-    addAdress3.adress = 'test3@gmail.com';
-    this.adresses.push(addAdress3);
-    */
+    for (let n = 0; n < this.size; n++) {
+      this.pagerlist.push(n);
+    }
   }
   pager(page: number) {
     this.begin = this.length * page;
