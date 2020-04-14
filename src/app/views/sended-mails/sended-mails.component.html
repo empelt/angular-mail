@@ -22,7 +22,7 @@
             </tbody>
           </table>
           <ul class="pagination">
-            <li class="page-item" *ngFor="let n of pagerlist"><a class="page-link" (click)="pager(n)">{{n}}</a></li>
+            <li class="page-item" *ngFor="let n of pagerlist" [class.active]="selectedIndex === n"><a class="page-link" (click)="pager(n)">{{n}}</a></li>
           </ul>
         </div>
       </div>

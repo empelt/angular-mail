@@ -26,7 +26,7 @@ export class SendedMailsComponent {
     { date: '2020/1/15', to: 'test15', title: 'hello! test15' },
     { date: '2020/1/16', to: 'test16', title: 'hello! test16' },
   ];
-
+  selectedIndex: number = 0;
   begin = 0;
   length = 5;
   size = (Object.keys(this.sendedmails).length - 1) / 5;
@@ -39,5 +39,6 @@ export class SendedMailsComponent {
   }
   pager(page: number) {
     this.begin = this.length * page;
+    this.selectedIndex = page;
   }
 }

@@ -32,6 +32,8 @@ export class MailadressSettingComponent {
   length = 5;
   size = (Object.keys(this.adresses).length - 1) / 5;
 
+  selectedIndex: number = 0;
+
   pagerlist = [];
   ngOnInit() {
     for (let n = 0; n < this.size; n++) {
@@ -40,5 +42,6 @@ export class MailadressSettingComponent {
   }
   pager(page: number) {
     this.begin = this.length * page;
+    this.selectedIndex = page;
   }
 }
