@@ -26,19 +26,20 @@ export class SendedMailsComponent {
     { date: '2020/1/15', to: 'test15', title: 'hello! test15' },
     { date: '2020/1/16', to: 'test16', title: 'hello! test16' },
   ];
-  selectedIndex: number = 0;
+  selectedIndex: number = 1;
   begin = 0;
   length = 5;
-  size = (Object.keys(this.sendedmails).length - 1) / 5;
+  size = (Object.keys(this.sendedmails).length - 1) / this.length;
 
   pagerlist = [];
   ngOnInit() {
-    for (let n = 0; n < this.size; n++) {
+    for (let n = 1; n <= this.size; n++) {
       this.pagerlist.push(n);
     }
   }
   pager(page: number) {
+    page -= 1;
     this.begin = this.length * page;
-    this.selectedIndex = page;
+    this.selectedIndex = page+1;
   }
 }
